@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 http://autosar.org/schema/r4.0/autosar40/cs/i">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="9354410a-e98d-41af-9165-b9c86fb67781">
+      <SHORT-NAME>BaseTypes</SHORT-NAME>
+      <ELEMENTS>
+        <SW-BASE-TYPE UUID="939b810e-88be-438f-a8a7-5f81a595af43">
+          <SHORT-NAME>float32</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+          <MEM-ALIGNMENT>32</MEM-ALIGNMENT>
+          <NATIVE-DECLARATION>float</NATIVE-DECLARATION>
+        </SW-BASE-TYPE>
+        <SW-BASE-TYPE UUID="7182a932-6bbf-468f-bba7-0d1c57204a77">
+          <SHORT-NAME>float64</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <BASE-TYPE-SIZE>64</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+          <MEM-ALIGNMENT>64</MEM-ALIGNMENT>
+          <NATIVE-DECLARATION>double</NATIVE-DECLARATION>
+        </SW-BASE-TYPE>
+        <SW-BASE-TYPE UUID="a7f1cee0-5c56-4e65-92cf-9cba634c0556">
+          <SHORT-NAME>sint16</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+          <MEM-ALIGNMENT>16</MEM-ALIGNMENT>
+          <NATIVE-DECLARATION>short</NATIVE-DECLARATION>
+        </SW-BASE-TYPE>
+        <SW-BASE-TYPE UUID="8ff7e5e1-06ee-4dce-a41e-3ef7e10c9f70">
+          <SHORT-NAME>sint32</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+          <MEM-ALIGNMENT>32</MEM-ALIGNMENT>
+          <NATIVE-DECLARATION>int</NATIVE-DECLARATION>
+        </SW-BASE-TYPE>
+        <SW-BASE-TYPE UUID="f950c270-0d07-4a1e-a002-603be586ef97">
+          <SHORT-NAME>sint8</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+          <MEM-ALIGNMENT>8</MEM-ALIGNMENT>
+          <NATIVE-DECLARATION>signed char</NATIVE-DECLARATION>
+        </SW-BASE-TYPE>
+        <SW-BASE-TYPE UUID="783ee3e5-a405-4ee0-8896-d422c891cd48">
+          <SHORT-NAME>uint16</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+          <MEM-ALIGNMENT>16</MEM-ALIGNMENT>
+          <NATIVE-DECLARATION>unsigned short</NATIVE-DECLARATION>
+        </SW-BASE-TYPE>
+        <SW-BASE-TYPE UUID="943c44f7-a269-4b5e-be47-a564e17282b4">
+          <SHORT-NAME>uint32</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+          <MEM-ALIGNMENT>32</MEM-ALIGNMENT>
+          <NATIVE-DECLARATION>unsigned int</NATIVE-DECLARATION>
+        </SW-BASE-TYPE>
+        <SW-BASE-TYPE UUID="35b47320-de32-4996-90e4-b2669881d4e0">
+          <SHORT-NAME>uint8</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+          <MEM-ALIGNMENT>8</MEM-ALIGNMENT>
+          <NATIVE-DECLARATION>unsigned char</NATIVE-DECLARATION>
+        </SW-BASE-TYPE>
+        <SW-BASE-TYPE UUID="b5ce373b-7f1e-44e7-b7d8-ef13410f85bd">
+          <SHORT-NAME>void</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>VOID</BASE-TYPE-ENCODING>
+          <NATIVE-DECLARATION>void</NATIVE-DECLARATION>
+        </SW-BASE-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="22bb77e3-233e-4093-9f0e-f24a085fe6f8">
+      <SHORT-NAME>ImplDataTypes</SHORT-NAME>
+      <ELEMENTS>
+        <IMPLEMENTATION-DATA-TYPE UUID="f2a58293-a11c-4f59-9c0c-81510e291e90">
+          <SHORT-NAME>Impl_Height</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>RTE</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="cab61efe-0f02-4d6e-a289-3b21dacf2e75">
+          <SHORT-NAME>Impl_HeightBnState</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/Impl_MultiStateBtn</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>RTE</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="75c60d10-30db-4bad-91bb-fc3aab317b52">
+          <SHORT-NAME>Impl_Incline</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>RTE</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="a3ff3351-d804-471d-8ee9-6d0432b7b1d5">
+          <SHORT-NAME>Impl_InclineBnState</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/Impl_MultiStateBtn</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>RTE</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="4e134f26-825b-4a90-9c5d-6ea18e681b4b">
+          <SHORT-NAME>Impl_MultiStateBtn</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>RTE</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="a89be0d1-f5f2-47da-9c7d-c7b3aded32f6">
+          <SHORT-NAME>Impl_Slide</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>RTE</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="0f1c8da3-3347-4044-ac36-d4cb811c5251">
+          <SHORT-NAME>Impl_SlidetBnState</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/Impl_MultiStateBtn</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>RTE</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="1a576019-f4ad-4280-b9e4-d19637719c49">
+          <SHORT-NAME>boolean</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/BaseTypes/uint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>BSW</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="8b0e126a-34b0-49b6-87bb-bb4b962643eb">
+          <SHORT-NAME>float32</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/BaseTypes/float32</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>BSW</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="48575fcb-bdb7-4045-bb3c-d4f38e899947">
+          <SHORT-NAME>float64</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/BaseTypes/float64</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>BSW</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="2bef5e51-006e-4ef6-b733-ad5e732fb945">
+          <SHORT-NAME>sint16</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/BaseTypes/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>BSW</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="da8e8aea-d39e-41da-9ba4-d252c52cdf30">
+          <SHORT-NAME>sint32</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/BaseTypes/sint32</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>BSW</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="880fe6d9-828a-433f-8d7d-b2087b0a7e2e">
+          <SHORT-NAME>sint8</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/BaseTypes/sint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>BSW</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="fd81fc00-d028-46b9-9ad4-3a7883e7ddd7">
+          <SHORT-NAME>uint16</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/BaseTypes/uint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>BSW</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="fe560d90-2189-4454-82d9-38327b85d0bc">
+          <SHORT-NAME>uint32</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/BaseTypes/uint32</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>BSW</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="d16eeef7-85f2-4a89-92c0-6c00a2c0e862">
+          <SHORT-NAME>uint8</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/BaseTypes/uint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>BSW</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="94e11f3b-d9ed-46e7-8427-6aab7454ecfe">
+          <SHORT-NAME>void</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/BaseTypes/void</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>BSW</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="81be4d4a-2e3d-47e9-9cb1-4e6612731f26">
+      <SHORT-NAME>MappingSets</SHORT-NAME>
+      <ELEMENTS>
+        <DATA-TYPE-MAPPING-SET UUID="ff9279fd-9f6d-4c0c-8f10-c7edff4cf4b6">
+          <SHORT-NAME>MappingSet</SHORT-NAME>
+        </DATA-TYPE-MAPPING-SET>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="6ddfdeab-59de-4118-8ca2-41daee218817">
+      <SHORT-NAME>PortInterfaces</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="8b6f2962-3791-48f5-8b94-d5a7eec42ce2">
+          <SHORT-NAME>ClientServer</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="201fd6a6-2123-449b-86a6-a54964f60c15">
+          <SHORT-NAME>ModeSwitch</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="46ec4b97-b5c2-4bd2-bdee-2de0eca92db4">
+          <SHORT-NAME>SenderReceiver</SHORT-NAME>
+          <ELEMENTS>
+            <SENDER-RECEIVER-INTERFACE UUID="a3c7b209-3fc9-4414-8c27-6c120b31e595">
+              <SHORT-NAME>SrIf_SeatCtrlBtns</SHORT-NAME>
+              <IS-SERVICE>false</IS-SERVICE>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="6ae4d076-7a3d-401e-8b0d-d9991898fd0c">
+                  <SHORT-NAME>DE_HeightState</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/Impl_HeightBnState</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+                <VARIABLE-DATA-PROTOTYPE UUID="10d472a6-c2b7-4a9d-9880-7d73275dd0f7">
+                  <SHORT-NAME>DE_InclineState</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/Impl_InclineBnState</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+                <VARIABLE-DATA-PROTOTYPE UUID="eba91df3-f5e3-4e33-8b16-89f410c66bcc">
+                  <SHORT-NAME>DE_SlideState</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/Impl_SlidetBnState</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+            <SENDER-RECEIVER-INTERFACE UUID="b9218a8a-f188-4bf5-8291-e15741c1e476">
+              <SHORT-NAME>SrIf_SeatCtrlData</SHORT-NAME>
+              <IS-SERVICE>false</IS-SERVICE>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="cbf0c503-273c-4129-8313-03bff4e655cf">
+                  <SHORT-NAME>DE_Height</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/Impl_Height</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+                <VARIABLE-DATA-PROTOTYPE UUID="cdda62d6-7bb5-4d9d-bc00-83e33d5ec750">
+                  <SHORT-NAME>DE_Incline</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/Impl_Incline</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+                <VARIABLE-DATA-PROTOTYPE UUID="f2a264a0-427d-4e4a-9621-9312bebb04ae">
+                  <SHORT-NAME>DE_Slide</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ImplDataTypes/Impl_Slide</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="c4c7f39f-8304-4b3d-94f8-ea6fea02c545">
+      <SHORT-NAME>SoftwareComponents</SHORT-NAME>
+      <ELEMENTS>
+        <SWC-IMPLEMENTATION UUID="aa437d0f-b10b-4ec6-b0b7-25e4bd0fe3b4">
+          <SHORT-NAME>Impl_SWC_HMI</SHORT-NAME>
+          <CODE-DESCRIPTORS>
+            <CODE UUID="99d1819a-c23d-413f-9f6b-fba62c32871c">
+              <SHORT-NAME>Code</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>SWC.c</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+            </CODE>
+          </CODE-DESCRIPTORS>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <RESOURCE-CONSUMPTION UUID="00ad117e-02c0-4ad4-a020-df6a200c2ef3">
+            <SHORT-NAME>ResourceConsumption</SHORT-NAME>
+          </RESOURCE-CONSUMPTION>
+          <SW-VERSION>1.0.0</SW-VERSION>
+          <VENDOR-ID>255</VENDOR-ID>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/SoftwareComponents/SWC_HMI/Ibhv_SWC_HMI</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+        <SWC-IMPLEMENTATION UUID="0b7f98bc-9d48-45b8-b951-c17905f7afb0">
+          <SHORT-NAME>Impl_SWC_SeatManger</SHORT-NAME>
+          <CODE-DESCRIPTORS>
+            <CODE UUID="d2101aaa-ea57-4de1-adbc-b4ad97109219">
+              <SHORT-NAME>Code</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>SWC.c</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+            </CODE>
+          </CODE-DESCRIPTORS>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <RESOURCE-CONSUMPTION UUID="671fa613-b916-4d15-a45f-f26cb405fcba">
+            <SHORT-NAME>ResourceConsumption</SHORT-NAME>
+          </RESOURCE-CONSUMPTION>
+          <SW-VERSION>1.0.0</SW-VERSION>
+          <VENDOR-ID>255</VENDOR-ID>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/SoftwareComponents/SWC_SeatManger/Ibhv_SWC_SeatManger</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="47ab67ca-258b-4ce0-ba7f-e969b13a910d">
+          <SHORT-NAME>SWC_HMI</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="602aadb2-173c-4c56-bf35-6cefacd034d2">
+              <SHORT-NAME>ppSeatCtrlBtns</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlBtns</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="9b577b66-66d9-42c4-acf4-b08cbc5ce96a">
+              <SHORT-NAME>rpSeatCtrlData</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlData</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="88ed947c-bf10-4758-8ebd-42c4df27dbef">
+              <SHORT-NAME>Ibhv_SWC_HMI</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MappingSets/MappingSet</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EVENTS>
+                <TIMING-EVENT UUID="248a5c15-f980-439e-8e7b-48587dc74ee0">
+                  <SHORT-NAME>TE_RE_HMI_MainFunction_100ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/SoftwareComponents/SWC_HMI/Ibhv_SWC_HMI/RE_HMI_MainFunction</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="5c950ed8-fa61-40b6-8686-b67204ad51b4">
+                  <SHORT-NAME>RE_HMI_MainFunction</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                    <VARIABLE-ACCESS UUID="4de9be7e-75de-495a-b4d7-25f93c5e0100">
+                      <SHORT-NAME>DRP_rpSeatCtrlData_DE_Height</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/SoftwareComponents/SWC_HMI/rpSeatCtrlData</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlData/DE_Height</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="7e5441ca-8b34-4efd-bb20-64f31f424864">
+                      <SHORT-NAME>DRP_rpSeatCtrlData_DE_Incline</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/SoftwareComponents/SWC_HMI/rpSeatCtrlData</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlData/DE_Incline</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="fa7c5748-0e19-4ea1-9682-f49c9ae1474e">
+                      <SHORT-NAME>DRP_rpSeatCtrlData_DE_Slide</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/SoftwareComponents/SWC_HMI/rpSeatCtrlData</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlData/DE_Slide</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="ee25aef8-988a-483e-afdd-220a0afc4237">
+                      <SHORT-NAME>DSP_ppSeatCtrlBtns_DE_HeightState</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/SoftwareComponents/SWC_HMI/ppSeatCtrlBtns</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlBtns/DE_HeightState</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="b60af4ed-4e94-47ed-a5c0-3be33ef0a8e4">
+                      <SHORT-NAME>DSP_ppSeatCtrlBtns_DE_InclineState</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/SoftwareComponents/SWC_HMI/ppSeatCtrlBtns</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlBtns/DE_InclineState</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="7b011402-f677-4daf-a478-b9caa2053744">
+                      <SHORT-NAME>DSP_ppSeatCtrlBtns_DE_SlideState</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/SoftwareComponents/SWC_HMI/ppSeatCtrlBtns</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlBtns/DE_SlideState</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
+                  <SYMBOL>RE_HMI_MainFunction</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="f149d70f-4bd5-4d39-8f8f-818e8db74dd5">
+          <SHORT-NAME>SWC_SeatManger</SHORT-NAME>
+          <PORTS>
+            <R-PORT-PROTOTYPE UUID="009480e8-ff3c-409b-9204-8323cad76cfb">
+              <SHORT-NAME>rpSeatCtrlBtns</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlBtns</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="10152304-18c0-4289-8406-f9e4f30d5222">
+              <SHORT-NAME>Ibhv_SWC_SeatManger</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MappingSets/MappingSet</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EVENTS>
+                <DATA-RECEIVED-EVENT UUID="fa98d3b0-484a-4135-8ba4-7cd5ab54e3b0">
+                  <SHORT-NAME>DRE_rpSeatCtrlBtns_DE_HeightState</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/SoftwareComponents/SWC_SeatManger/Ibhv_SWC_SeatManger/RE_SeatManger_SetHeight</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SoftwareComponents/SWC_SeatManger/rpSeatCtrlBtns</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlBtns/DE_HeightState</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+                <DATA-RECEIVED-EVENT UUID="388bf883-e313-4ffe-9a4f-2cfcaf7f5cd1">
+                  <SHORT-NAME>DRE_rpSeatCtrlBtns_DE_InclineState</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/SoftwareComponents/SWC_SeatManger/Ibhv_SWC_SeatManger/RE_SeatManger_SetIncline</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SoftwareComponents/SWC_SeatManger/rpSeatCtrlBtns</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlBtns/DE_InclineState</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+                <DATA-RECEIVED-EVENT UUID="23f7f90a-13b3-4d75-8885-5f9f261f54a1">
+                  <SHORT-NAME>DRE_rpSeatCtrlBtns_DE_SlideState</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/SoftwareComponents/SWC_SeatManger/Ibhv_SWC_SeatManger/RE_SeatManger_SetSlide</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SoftwareComponents/SWC_SeatManger/rpSeatCtrlBtns</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlBtns/DE_SlideState</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+              </EVENTS>
+              <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="a35519ec-d45c-4f62-934b-6f93410b3ee3">
+                  <SHORT-NAME>RE_SeatManger_SetHeight</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                    <VARIABLE-ACCESS UUID="deed511a-c166-4223-8f12-e3a3bbd5640c">
+                      <SHORT-NAME>DRP_rpSeatCtrlBtns_DE_HeightState</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/SoftwareComponents/SWC_SeatManger/rpSeatCtrlBtns</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlBtns/DE_HeightState</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <SYMBOL>RE_SeatManger_SetHeight</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="760899d5-e6cd-483d-90ce-3389f5da6c3c">
+                  <SHORT-NAME>RE_SeatManger_SetIncline</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                    <VARIABLE-ACCESS UUID="6d6354bd-2bce-415c-9f1b-f20c7baaf258">
+                      <SHORT-NAME>DRP_rpSeatCtrlBtns_DE_InclineState</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/SoftwareComponents/SWC_SeatManger/rpSeatCtrlBtns</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlBtns/DE_InclineState</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <SYMBOL>RE_SeatManger_SetIncline</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="c58ba769-36e3-4958-aa4f-d92b96cf5a75">
+                  <SHORT-NAME>RE_SeatManger_SetSlide</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                    <VARIABLE-ACCESS UUID="ca9d0c1a-0913-4853-a19d-1e54698e84df">
+                      <SHORT-NAME>DRP_rpSeatCtrlBtns_DE_SlideState</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/SoftwareComponents/SWC_SeatManger/rpSeatCtrlBtns</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SenderReceiver/SrIf_SeatCtrlBtns/DE_SlideState</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <SYMBOL>RE_SeatManger_SetSlide</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="3b7fe22f-1120-46cd-ac1d-040371d5ab94">
+      <SHORT-NAME>Compositions</SHORT-NAME>
+      <ELEMENTS>
+        <COMPOSITION-SW-COMPONENT-TYPE UUID="6d0b1c11-18fb-41a8-a09c-59f6e9912769">
+          <SHORT-NAME>Car_SeatComposition</SHORT-NAME>
+          <COMPONENTS>
+            <SW-COMPONENT-PROTOTYPE UUID="16127f42-15db-456b-809a-775b61108dac">
+              <SHORT-NAME>SWC_HMI</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/SoftwareComponents/SWC_HMI</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="4644664e-fd8d-4336-80ec-90d95872c485">
+              <SHORT-NAME>SWC_SeatManger</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/SoftwareComponents/SWC_SeatManger</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+          </COMPONENTS>
+          <CONNECTORS>
+            <ASSEMBLY-SW-CONNECTOR UUID="3b613ec4-e62c-47ad-a4ba-65073ab77244">
+              <SHORT-NAME>SWC_HMI_ppSeatCtrlBtns_SWC_SeatManger_rpSeatCtrlBtns</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Compositions/Car_SeatComposition/SWC_HMI</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/SoftwareComponents/SWC_HMI/ppSeatCtrlBtns</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Compositions/Car_SeatComposition/SWC_SeatManger</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/SoftwareComponents/SWC_SeatManger/rpSeatCtrlBtns</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+          </CONNECTORS>
+        </COMPOSITION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
